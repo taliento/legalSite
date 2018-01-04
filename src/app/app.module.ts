@@ -23,6 +23,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { FabButtonComponent } from './fab-button/fab-button.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { FabButtonComponent } from './fab-button/fab-button.component';
     NavbarComponent,
     HomeComponent,
     ContactComponent,
-    FabButtonComponent
+    FabButtonComponent,
+    AboutComponent
   ],
   imports: [
     routing,

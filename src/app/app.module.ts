@@ -22,6 +22,7 @@ import {
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { FabButtonComponent } from './fab-button/fab-button.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ContactComponent } from './contact/contact.component';
     MainLayoutComponent,
     NavbarComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    FabButtonComponent
   ],
   imports: [
     routing,

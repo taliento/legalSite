@@ -22,3 +22,9 @@ mat-card-content > * {
   margin: 0 auto;
   width: 50rem;
 }
+.valign-center {
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  padding-bottom: 1rem;
+}

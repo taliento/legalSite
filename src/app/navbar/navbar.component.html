@@ -7,13 +7,13 @@
   <span class="example-fill-remaining-space"></span>
 
   <div class="button-row">
-    <button mat-button>Basic</button>
+    <button mat-button [routerLink]="['/main/contact']">Contatti</button>
   </div>
-  <button mat-icon-button [mat-menu-trigger-for]="menu">
+  <!--<button mat-icon-button [mat-menu-trigger-for]="menu">
     <mat-icon>more_vert</mat-icon>
-  </button>
+  </button> -->
 </mat-toolbar>
-<mat-menu x-position="before" #menu="matMenu">
+<!-- <mat-menu x-position="before" #menu="matMenu">
   <button mat-menu-item>Option 1</button>
   <button mat-menu-item>Option 2</button>
-</mat-menu>
+</mat-menu> -->

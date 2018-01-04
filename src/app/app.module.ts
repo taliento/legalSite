@@ -12,11 +12,16 @@ import {
   MatMenuModule,
   MatToolbarModule,
   MatIconModule,
-  MatCardModule
+  MatCardModule,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatInputModule
 } from '@angular/material';
+
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -24,7 +29,8 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     MainLayoutComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     routing,
@@ -37,7 +43,10 @@ import { HomeComponent } from './home/home.component';
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule
   ],
   providers: [Title],
   bootstrap: [AppComponent]

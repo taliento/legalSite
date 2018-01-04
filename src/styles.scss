@@ -22,13 +22,24 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-mat-toolbar-row {
-  justify-content: space-between;
+div {
+    display: block;
 }
-
-.done {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  color: white;
+.header-background {
+  overflow: hidden;
+  background: #673ab7;
+}
+.header-section {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.header-headline {
+  color: rgba(255, 255, 255, 0.87);
+}
+.header-start {
+  color: #673ab7;
+}
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
 }

@@ -28,6 +28,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FabButtonComponent } from './fab-button/fab-button.component';
 import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { HeaderComponent } from './header/header.component';
     ContactComponent,
     FabButtonComponent,
     AboutComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     routing,

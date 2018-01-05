@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Header } from '../shared/models';
+import { HeaderService } from '../shared/services';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  private header: Header = new Header();
 
-  ngOnInit() { }
+  constructor(private headerService: HeaderService) { }
+
+  ngOnInit() { //FIXME service
+
+    this.header.title = 'Avvocato pinco';
+    this.header.subtitle = 'faccio cose di legge..';
+    this.header.button.action = '/main/about';
+    this.header.button.label = 'Chi sono';
+
+    this.headerService.setHeader(this.header);
+
+
+  }
 
 }

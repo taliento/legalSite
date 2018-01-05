@@ -1,18 +1,8 @@
-.header-contact {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  margin: 0 auto;
-  width: 80%;
-}
-.contact-card {
-  background: #673ab7;
-  color: rgba(255, 255, 255, 0.87) !important;
-}
 .form-container {
   display: flex;
   flex-direction: column;
 }
-mat-card-content > * {
+.form-container mat-card-content > * {
   width: 100%;
 }
 .main-container {
@@ -21,10 +11,4 @@ mat-card-content > * {
   flex-direction: column;
   margin: 0 auto;
   width: 80%;
-}
-.valign-center {
-  display: inline-flex;
-  vertical-align: middle;
-  align-items: center;
-  padding-bottom: 1rem;
 }

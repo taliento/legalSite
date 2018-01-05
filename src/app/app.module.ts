@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { routing } from './app.routing';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HeaderService } from './shared/services';
 
 //material modules
 import {
@@ -15,7 +16,9 @@ import {
   MatCardModule,
   MatFormFieldModule,
   MatSelectModule,
-  MatInputModule
+  MatInputModule,
+  MatSnackBarModule,
+  MatListModule
 } from '@angular/material';
 
 
@@ -24,6 +27,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { FabButtonComponent } from './fab-button/fab-button.component';
 import { AboutComponent } from './about/about.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -34,7 +38,8 @@ import { AboutComponent } from './about/about.component';
     HomeComponent,
     ContactComponent,
     FabButtonComponent,
-    AboutComponent
+    AboutComponent,
+    HeaderComponent
   ],
   imports: [
     routing,
@@ -50,9 +55,11 @@ import { AboutComponent } from './about/about.component';
     MatCardModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule,
+    MatListModule
   ],
-  providers: [Title],
+  providers: [Title,HeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

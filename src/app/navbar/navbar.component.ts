@@ -1,15 +1,16 @@
 import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
-import { navbarAnimation } from '../shared/animations/fade-animation';
+import { navbarFade, navbarBump } from '../shared/animations/navbar-animation';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
-  animations: [navbarAnimation]
+  animations: [navbarFade, navbarBump]
 })
 export class NavbarComponent implements OnInit {
 
-  state = 'show'
+  state = 'show';
+  bump = 'large';
 
   constructor(public el: ElementRef) { }
 
@@ -22,13 +23,16 @@ export class NavbarComponent implements OnInit {
 
      if(scrollPosition == 0) {
        this.state = 'show';
+       this.bump = 'large';
        return;
      }
 
      if (scrollPosition > componentPosition + 100) {
        this.state = 'hide'
+       this.bump = 'small';
      } else {
-       this.state = 'show'
+       this.state = 'show';
+       this.bump = 'large';
      }
 
    }

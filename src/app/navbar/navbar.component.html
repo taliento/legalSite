@@ -1,10 +1,10 @@
 <mat-toolbar color="primary" class="mat-elevation-z6">
 
-    <mat-toolbar-row>
-      <button mat-button class="title-center" [routerLink]="['main/home']">Legal Site</button>
+    <mat-toolbar-row >
+      <button [@navbarBump]="bump" mat-button class="title-center" [routerLink]="['main/home']">Legal Site</button>
     </mat-toolbar-row>
 
-    <mat-toolbar-row [@navbarAnimation]="state">
+    <mat-toolbar-row [@navbarFade]="state">
       <button mat-button [routerLink]="['/main/contact']">Contatti</button>
       <button mat-button [routerLink]="['/main/about']">Chi siamo</button>
     </mat-toolbar-row>

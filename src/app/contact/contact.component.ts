@@ -14,7 +14,7 @@ export class ContactComponent implements OnInit {
 
   private header: Header = new Header();
   private mail: Mail = new Mail();
-  private contactFormGroup: FormGroup;
+  contactFormGroup: FormGroup;
 
   constructor(private snackBar: MatSnackBar,
     private headerService: HeaderService,
@@ -56,7 +56,7 @@ export class ContactComponent implements OnInit {
   }
 
   sendEmail() {
-    
+
     this.mailService.sendMail(this.mail).then(response => {
       this.snackBar.open(response, "Chiudi", {
         duration: 2000,

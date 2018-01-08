@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Header } from '../shared/models';
 import { HeaderService } from '../shared/services';
+import {LiveAnnouncer} from '@angular/cdk/a11y';
+
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,8 @@ export class HomeComponent implements OnInit {
 
   private header: Header = new Header();
 
-  constructor(private headerService: HeaderService) { }
+  constructor(private headerService: HeaderService,
+     private live: LiveAnnouncer) { }
 
   ngOnInit() { //FIXME service
 
@@ -23,6 +26,10 @@ export class HomeComponent implements OnInit {
     this.headerService.setHeader(this.header);
 
 
+  }
+
+  announceText(message: string) {
+    this.live.announce(message);
   }
 
 }

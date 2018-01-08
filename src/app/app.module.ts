@@ -21,7 +21,9 @@ import {
   MatSelectModule,
   MatInputModule,
   MatSnackBarModule,
-  MatListModule
+  MatListModule,
+  MatGridListModule,
+  MatProgressBarModule
 } from '@angular/material';
 
 
@@ -65,7 +67,9 @@ import { FooterComponent } from './footer/footer.component';
     MatSelectModule,
     MatInputModule,
     MatSnackBarModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatProgressBarModule
   ],
   providers: [
     Title,

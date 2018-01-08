@@ -1,5 +1,19 @@
-.homepage-promo {
+.demo-grid-list {
+  display: flex;
+  flex-flow: column nowrap;
   margin: 0 auto;
   width: 80%;
-  padding: 1rem;
+
+  .mat-card {
+    margin: 16px 0;
+  }
+
+  p {
+    margin: 16px;
+  }
+
+  .demo-basic-list .mat-grid-tile {
+    // background: rgba(0, 0, 0, 0.32);
+  }
+
 }

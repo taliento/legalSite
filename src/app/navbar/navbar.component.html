@@ -1,15 +1,14 @@
 <mat-toolbar color="primary" class="mat-elevation-z6">
-  <div class="button-row" [routerLink]="['main/home']">
-    <button mat-button >Legal Site</button>
-  </div>
 
-  <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
+    <mat-toolbar-row>
+      <button mat-button class="title-center" [routerLink]="['main/home']">Legal Site</button>
+    </mat-toolbar-row>
 
-  <div class="button-row">
-    <button mat-button [routerLink]="['/main/contact']">Contatti</button>
-    <button mat-button [routerLink]="['/main/about']">Chi siamo</button>
-  </div>
+    <mat-toolbar-row [@navbarAnimation]="state">
+      <button mat-button [routerLink]="['/main/contact']">Contatti</button>
+      <button mat-button [routerLink]="['/main/about']">Chi siamo</button>
+    </mat-toolbar-row>
+
   <!--<button mat-icon-button [mat-menu-trigger-for]="menu">
     <mat-icon>more_vert</mat-icon>
   </button> -->

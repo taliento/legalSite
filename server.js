@@ -4,10 +4,10 @@
 require('rootpath')();
 const express = require('express');
 const expressJwt = require('express-jwt');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
 const _ = require('lodash');
-const cors = require('cors');
 
 const app = express();
 
@@ -18,11 +18,13 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+//db connection
+// app.locals.db = require('./datasource/mongoskin-datasource');
+
 
 // Create link to Angular build directory
 const distDir = __dirname + '/dist/';
 app.use(express.static(distDir));
-
 
 //API location
 // use JWT auth to secure the api
@@ -33,9 +35,9 @@ app.use(expressJwt({
 }));
 
 // routes
-// _.forEach(require('./routes/api-mapping'), (_route) => {
-//   app.use(_route.endpoint, require(_route.controller));
-// });
+_.forEach(require('./routes/api-mapping'), (_route) => {
+  app.use(_route.endpoint, require(_route.controller));
+});
 
 //error handling
 function logErrors(err, req, res, next) {

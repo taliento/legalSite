@@ -1,10 +1,13 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; //TODO INTERCEPTOR
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { routing } from './app.routing';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { HeaderService } from './shared/services';
+import { HeaderService, MailService } from './shared/services';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 //material modules
 import {
@@ -47,6 +50,9 @@ import { FooterComponent } from './footer/footer.component';
     routing,
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
 
     //materiale modules
     MatButtonModule,
@@ -61,7 +67,11 @@ import { FooterComponent } from './footer/footer.component';
     MatSnackBarModule,
     MatListModule
   ],
-  providers: [Title,HeaderService],
+  providers: [
+    Title,
+    HeaderService,
+    MailService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

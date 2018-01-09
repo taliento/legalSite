@@ -13,10 +13,13 @@ export class AboutComponent implements OnInit {
 
   constructor(private headerService: HeaderService) { }
 
-  ngOnInit() { //FIXME service
+  ngOnInit() {
+    this.setHeader();
+  }
+
+  setHeader() {//FIXME service
     this.header.title = 'Avvocato pinco';
     this.header.subtitle = 'faccio cose di legge..';
-
     this.headerService.setHeader(this.header);
   }
 

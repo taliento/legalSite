@@ -1,19 +1,28 @@
 .demo-grid-list {
   display: flex;
   flex-flow: column nowrap;
-  margin: 0 auto;
+  margin: 1rem auto;
   width: 80%;
 
-  .mat-card {
-    margin: 16px 0;
-  }
+  // .mat-card {
+  // }
 
   p {
-    margin: 16px;
+    margin: 1rem;
   }
 
-  .demo-basic-list .mat-grid-tile {
-    // background: rgba(0, 0, 0, 0.32);
+  mat-grid-tile-header {
+    font-size: 1.5rem;
+    background: #673ab7;
+    color: rgba(255, 255, 255, 0.87) !important;
   }
+
+  mat-grid-tile-footer {
+    background: rgba(255, 255, 255, 0.87) !important;
+  }
+
+  // .demo-basic-list .mat-grid-tile {
+  //   background: rgba(0, 0, 0, 0.32);
+  // }
 
 }

@@ -31,3 +31,11 @@ div {
 article, aside, footer, header, hgroup, main, nav, section {
     display: block;
 }
+
+.main-container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+}

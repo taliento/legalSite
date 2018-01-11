@@ -1,4 +1,4 @@
-<mat-card [@tileBump]="state">
+<mat-card [@tileBump]="state" [routerLink]="['/main/feature',tile._id]">
   <mat-card-title>
     <!-- <mat-icon mat-grid-avatar [innerText]="tile.icon"></mat-icon> -->
     <h2 [innerText]="tile.title"></h2>

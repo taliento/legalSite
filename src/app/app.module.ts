@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { routing } from './app.routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderService, MailService } from './shared/services';
+import { HeaderService, MailService, FeaturesService } from './shared/services';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -36,6 +36,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ShowCaseComponent } from './show-case/show-case.component';
 import { TileComponent } from './tile/tile.component';
+import { FeatureComponent } from './feature/feature.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { TileComponent } from './tile/tile.component';
     HeaderComponent,
     FooterComponent,
     ShowCaseComponent,
-    TileComponent
+    TileComponent,
+    FeatureComponent
   ],
   imports: [
     routing,
@@ -78,7 +80,8 @@ import { TileComponent } from './tile/tile.component';
   providers: [
     Title,
     HeaderService,
-    MailService
+    MailService,
+    FeaturesService
   ],
   bootstrap: [AppComponent]
 })

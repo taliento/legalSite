@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { Tile } from '../shared/models';
+import { FeaturesService } from '../shared/services';
 
 @Component({
   selector: 'app-show-case',
@@ -11,7 +12,7 @@ export class ShowCaseComponent implements OnInit {
   tiles: Array<Tile> = [];
   loading: boolean = false;
 
-  constructor( ) { }
+  constructor(private featuresService: FeaturesService) { }
 
   ngOnInit() {
     this.loadtiles();
@@ -21,20 +22,15 @@ export class ShowCaseComponent implements OnInit {
 
     this.loading = true;
 
-    setTimeout(() => {
-      this.tiles.push(new Tile('boh','shopping_cart',
-      'Maecenas rhoncus, metus vel luctus feugiat, arcu odio hendrerit odio'
-      ));
-      this.tiles.push(new Tile('La legalità','euro_symbol','some text happens'));
-      this.tiles.push(new Tile('Diritto di famiglia','pan_tool','some text happens'));
-      this.tiles.push(new Tile('Successioni','shopping_cart','some text happens'));
-      this.tiles.push(new Tile('Pareri','euro_symbol','some text happens'));
-      this.tiles.push(new Tile('ah boh','pan_tool','some text happens'));
-      this.tiles.push(new Tile('boh','shopping_cart','some text happens'));
-      this.tiles.push(new Tile('euro','euro_symbol','some text happens'));
-      this.loading = false;
-    }, 1000);
-
+    this.featuresService.getAll()
+    .then(
+      tiles => {
+        this.tiles = tiles;
+        this.loading = false;
+      },
+      error => {
+        console.log(error);
+      });
 
   }
 

@@ -3,6 +3,7 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { FeatureComponent} from './feature/feature.component';
 
 const appRoutes: Routes = [
   {
@@ -20,6 +21,10 @@ const appRoutes: Routes = [
       {
         path: 'about',
         component: AboutComponent
+      },
+      {
+        path: 'feature/:id',
+        component: FeatureComponent
       }
     ]
   },

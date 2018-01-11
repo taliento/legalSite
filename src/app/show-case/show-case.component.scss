@@ -6,8 +6,8 @@
 }
 
 .tile-list {
-  display: flex;
-  flex-wrap: wrap;
+  margin: auto;
+  width: 100%;
   // padding: 0.5rem;
 }
 
@@ -15,5 +15,5 @@ app-tile {
   display: inline-block;
   margin: 0.5rem;
   vertical-align: top;
-  width: 18rem;
+  // width: 18rem;
 }

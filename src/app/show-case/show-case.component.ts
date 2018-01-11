@@ -23,12 +23,12 @@ export class ShowCaseComponent implements OnInit {
 
     setTimeout(() => {
       this.tiles.push(new Tile('boh','shopping_cart',
-      'Maecenas rhoncus, metus vel luctus feugiat, arcu odio hendrerit odio, sed fermentum mauris nibh a ex. Nunc faucibus fermentum metus, mattis condimentum libero gravida et. Nullam non eros ut ipsum dictum maximus ut ut nulla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Orci varius natoque'
+      'Maecenas rhoncus, metus vel luctus feugiat, arcu odio hendrerit odio'
       ));
-      this.tiles.push(new Tile('euro','euro_symbol','some text happens'));
-      this.tiles.push(new Tile('ah boh','pan_tool','some text happens'));
-      this.tiles.push(new Tile('boh','shopping_cart','some text happens'));
-      this.tiles.push(new Tile('euro','euro_symbol','some text happens'));
+      this.tiles.push(new Tile('La legalità','euro_symbol','some text happens'));
+      this.tiles.push(new Tile('Diritto di famiglia','pan_tool','some text happens'));
+      this.tiles.push(new Tile('Successioni','shopping_cart','some text happens'));
+      this.tiles.push(new Tile('Pareri','euro_symbol','some text happens'));
       this.tiles.push(new Tile('ah boh','pan_tool','some text happens'));
       this.tiles.push(new Tile('boh','shopping_cart','some text happens'));
       this.tiles.push(new Tile('euro','euro_symbol','some text happens'));

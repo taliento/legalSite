@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 import { navbarFade, navbarBump } from '../shared/animations/navbar-animation';
+import { FeaturesService } from '../shared/services';
 
 @Component({
   selector: 'app-navbar',
@@ -12,9 +13,21 @@ export class NavbarComponent implements OnInit {
   state = 'show';
   bump = 'large';
 
-  constructor(public el: ElementRef) { }
+  tiles = [];
 
-  ngOnInit() { }
+  constructor(public el: ElementRef,
+    private featuresService: FeaturesService) { }
+
+  ngOnInit() {
+    this.featuresService.getAll()
+    .then(
+      tiles => {
+        this.tiles = tiles;
+      },
+      error => {
+        console.log(error);
+      });
+  }
 
   @HostListener('window:scroll', ['$event'])
    checkScroll() {

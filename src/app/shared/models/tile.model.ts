@@ -1,4 +1,4 @@
-export class Tail {
+export class Tile {
   title: string;
   text: string;
   icon: string;

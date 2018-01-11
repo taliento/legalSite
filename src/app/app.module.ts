@@ -34,6 +34,8 @@ import { FabButtonComponent } from './fab-button/fab-button.component';
 import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ShowCaseComponent } from './show-case/show-case.component';
+import { TileComponent } from './tile/tile.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { FooterComponent } from './footer/footer.component';
     FabButtonComponent,
     AboutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ShowCaseComponent,
+    TileComponent
   ],
   imports: [
     routing,

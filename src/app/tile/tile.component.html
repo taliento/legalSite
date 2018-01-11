@@ -1,11 +1,11 @@
 <mat-card [@tileBump]="state" [routerLink]="['/main/feature',tile._id]">
-  <mat-card-title>
+  <mat-card-title [innerText]="tile.title">
     <!-- <mat-icon mat-grid-avatar [innerText]="tile.icon"></mat-icon> -->
-    <h2 [innerText]="tile.title"></h2>
   </mat-card-title>
+  <mat-card-subtitle [innerText]="tile.subtitle"></mat-card-subtitle>
 
-  <mat-card-content>
-    <p [innerText]="tile.text"></p>
-  </mat-card-content>
+  <!-- <mat-card-content>
+    <div [innerHtml]="tile.text"></div>
+  </mat-card-content> -->
 
 </mat-card>

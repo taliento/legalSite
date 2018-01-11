@@ -34,6 +34,7 @@ export class FeatureComponent implements OnInit {
 
   setHeader () { //FIXME service
     this.header.title = this.tile.title;
+    this.header.subtitle = this.tile.subtitle;
     this.headerService.setHeader(this.header);
   }
 

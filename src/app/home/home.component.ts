@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Header } from '../shared/models';
 import { HeaderService } from '../shared/services';
 
@@ -10,7 +10,6 @@ import { HeaderService } from '../shared/services';
 export class HomeComponent implements OnInit {
 
   private header: Header = new Header();
-
 
   constructor(private headerService: HeaderService) { }
 

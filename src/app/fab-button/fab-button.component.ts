@@ -11,6 +11,7 @@ export class FabButtonComponent implements OnInit {
   @Input() title: string;
   @Input() action: string;
   @Input() icon: string;
+  @Input() class: string;
 
   constructor() { }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Contact } from '../shared/models';
+import { ContactsService } from '../shared/services';
 
 @Component({
   selector: 'app-contact-list',
@@ -11,12 +12,16 @@ export class ContactListComponent implements OnInit {
   contacts = [];
   addressList = [];
 
-  constructor() { }
+  constructor(private contactService: ContactsService) { }
 
   ngOnInit() { //TODO service
-    this.contacts.push(new Contact('phone','011 28766'));
-    this.contacts.push(new Contact('phone_android','333 0125513'));
-    this.contacts.push(new Contact('email','mail@email.com'));
+    
+    this.contactService.getAll().then(contacts => {
+      this.contacts = contacts;
+    },
+    error => {
+      console.log(error);
+    });
   }
 
 }

@@ -1,9 +1,7 @@
 <mat-toolbar color="primary" class="mat-elevation-z6">
-
     <mat-toolbar-row >
       <button [@navbarBump]="bump" mat-button class="title-center" [routerLink]="['main/home']">Legal Site</button>
     </mat-toolbar-row>
-
     <mat-toolbar-row [@navbarFade]="state">
       <button mat-button [routerLink]="['/main/about']">Chi siamo</button>
       <button mat-button [routerLink]="['/main/contact']">Contatti</button>
@@ -11,8 +9,6 @@
         Aree <mat-icon>keyboard_arrow_down</mat-icon>
       </button>
     </mat-toolbar-row>
-
-
 </mat-toolbar>
 <mat-menu x-position="before" #menu="matMenu">
   <button *ngFor="let tile of tiles" mat-menu-item [innerText]="tile.title" [routerLink]="['/main/feature',tile._id]"></button>

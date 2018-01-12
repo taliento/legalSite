@@ -1,0 +1,15 @@
+<mat-list>
+  <h3 mat-subheader>Contatti</h3>
+  <mat-list-item *ngFor="let contact of contacts">
+    <mat-icon mat-list-icon [innerText]="contact.icon"></mat-icon>
+    <h4 mat-line [innerText]="contact.text"></h4>
+  </mat-list-item>
+</mat-list>
+
+<mat-list>
+  <h3 mat-subheader>Indirizzi</h3>
+  <mat-list-item *ngFor="let address of addressList">
+    <mat-icon mat-list-icon [innerText]="contact.icon"></mat-icon>
+    <h4 mat-line [innerText]="contact.text"></h4>
+  </mat-list-item>
+</mat-list>

@@ -1,8 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 import { MatSnackBar } from '@angular/material';
-import { Header, Contact, Mail } from '../shared/models';
-import { HeaderService, MailService } from '../shared/services';
-import {FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
+import {
+  Header,
+  Contact,
+  Mail
+} from '../shared/models';
+import {
+  HeaderService,
+  MailService
+} from '../shared/services';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  FormControl
+} from '@angular/forms';
 
 
 @Component({
@@ -48,22 +63,24 @@ export class ContactComponent implements OnInit {
 
   setHeader () { //FIXME service
     this.header.title = 'Contatti';
-    this.header.card = true;
-    this.header.contacts.push(new Contact('phone','011 28766'));
-    this.header.contacts.push(new Contact('phone_android','333 0125513'));
-    this.header.contacts.push(new Contact('email','mail@email.com'));
+    // this.header.card = true;
+    // this.header.contacts.push(new Contact('phone','011 28766'));
+    // this.header.contacts.push(new Contact('phone_android','333 0125513'));
+    // this.header.contacts.push(new Contact('email','mail@email.com'));
     this.headerService.setHeader(this.header);
   }
 
   sendEmail() {
 
-    this.mailService.sendMail(this.mail).then(response => {
-      this.snackBar.open(response, "Chiudi", {
-        duration: 2000,
-      });
-    }, error => {
-      console.log(error);
-      this.snackBar.open("Errore! "+error, "Chiudi");
+    this.mailService.sendMail(this.mail).then(
+      response => {
+        this.snackBar.open(response, "Chiudi", {
+          duration: 2000,
+        });
+      },
+      error => {
+        console.log(error);
+        this.snackBar.open("Errore! "+error, "Chiudi");
     });
   }
 

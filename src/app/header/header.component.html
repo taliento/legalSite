@@ -1,6 +1,6 @@
 <header *ngIf="header">
   <div class="header-background">
-    <div class="header-section" *ngIf="!header.card">
+    <div class="header-section">
       <div class="header-headline">
         <h1 class="mat-display-1 siteTitle" [innerText]="header.title"></h1>
         <h2 [innerText]="header.subtitle" *ngIf="header.subtitle"></h2>
@@ -8,27 +8,6 @@
       <div class="header-start" *ngIf="header.button.action">
         <button mat-raised-button [routerLink]="[header.button.action]" [innerText]="header.button.label"></button>
       </div>
-    </div>
-
-    <div class="header-card-container" *ngIf="header.card">
-      <mat-card class="header-card">
-        <mat-card-title><h1 [innerText]="header.title"></h1></mat-card-title>
-        <mat-card-content>
-
-          <mat-list>
-           <mat-list-item *ngFor="let contact of header.contacts" class="header-card">
-               <div class="valign-center">
-               <i class="material-icons" [innerText]="contact.icon"></i>
-               <span>&nbsp;{{contact.text}}</span>
-             </div>
-           </mat-list-item>
-          </mat-list>
-
-          <div>
-            <p>indirizzi..TODO</p>
-          </div>
-        </mat-card-content>
-      </mat-card>
     </div>
   </div>
 </header>

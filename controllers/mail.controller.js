@@ -9,6 +9,9 @@ router.post('/sendMail', sendMail);
 module.exports = router;
 
 function sendMail(req, res) {
+
+  //TODO google auth
+
   mailService.sendMail(req.body)
   .then((doc) => {
     res.send(doc);

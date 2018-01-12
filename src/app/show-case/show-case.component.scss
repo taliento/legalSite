@@ -1,12 +1,13 @@
 .tile-list {
+  text-align: center;
   margin: auto;
   width: 100%;
-  // padding: 0.5rem;
 }
 
 app-tile {
   display: inline-block;
-  margin: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   vertical-align: top;
   // width: 18rem;
 }

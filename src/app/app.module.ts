@@ -37,6 +37,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ShowCaseComponent } from './show-case/show-case.component';
 import { TileComponent } from './tile/tile.component';
 import { FeatureComponent } from './feature/feature.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { FeatureComponent } from './feature/feature.component';
     FooterComponent,
     ShowCaseComponent,
     TileComponent,
-    FeatureComponent
+    FeatureComponent,
+    ContactListComponent
   ],
   imports: [
     routing,

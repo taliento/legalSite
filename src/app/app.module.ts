@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { routing } from './app.routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderService, MailService, FeaturesService, ContactsService } from './shared/services';
+import { HeaderService, MailService, FeaturesService, ContactsService, AddressService } from './shared/services';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -84,7 +84,8 @@ import { ContactListComponent } from './contact-list/contact-list.component';
     HeaderService,
     MailService,
     FeaturesService,
-    ContactsService
+    ContactsService,
+    AddressService
   ],
   bootstrap: [AppComponent]
 })

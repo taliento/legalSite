@@ -7,11 +7,11 @@ import { Title } from '@angular/platform-browser';
   template:`<router-outlet></router-outlet>`
 })
 export class AppComponent  implements OnInit{
-  title = 'app';
+  title = 'Legal site';
 
   public constructor(private titleService: Title) {}
 
   ngOnInit() {
-    this.titleService.setTitle('Legal site');
+    this.titleService.setTitle(this.title);
   }
 }

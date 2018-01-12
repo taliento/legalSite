@@ -26,7 +26,6 @@ export class TileComponent implements OnInit {
     this.state = "inactive";
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

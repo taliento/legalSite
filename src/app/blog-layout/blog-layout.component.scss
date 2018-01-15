@@ -5,6 +5,7 @@
   margin: 0 auto;
   padding-top: 3rem;
   display: flex;
+  align-items: flex-start;
   position: relative;
 }
 
@@ -13,7 +14,7 @@
 }
 
 .tab-contents {
-  top: 2rem;
+  top: 35px;
   position: -webkit-sticky;
   position: sticky;
   display: inline-block;

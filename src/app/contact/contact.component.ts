@@ -63,10 +63,6 @@ export class ContactComponent implements OnInit {
 
   setHeader () { //FIXME service
     this.header.title = 'Contatti';
-    // this.header.card = true;
-    // this.header.contacts.push(new Contact('phone','011 28766'));
-    // this.header.contacts.push(new Contact('phone_android','333 0125513'));
-    // this.header.contacts.push(new Contact('email','mail@email.com'));
     this.headerService.setHeader(this.header);
   }
 

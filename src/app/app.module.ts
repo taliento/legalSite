@@ -33,7 +33,8 @@ import {
   MatSnackBarModule,
   MatListModule,
   MatGridListModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatSidenavModule
 } from '@angular/material';
 
 
@@ -50,6 +51,9 @@ import { FeatureComponent } from './feature/feature.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { NewsComponent } from './news/news.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
+import { BlogLayoutComponent } from './blog-layout/blog-layout.component';
+import { BlogBodyComponent } from './blog-layout/blog-body/blog-body.component';
+import { BlogListComponent } from './blog-layout/blog-list/blog-list.component';
 
 
 @NgModule({
@@ -68,7 +72,10 @@ import { NewsDetailComponent } from './news/news-detail/news-detail.component';
     FeatureComponent,
     ContactListComponent,
     NewsComponent,
-    NewsDetailComponent
+    NewsDetailComponent,
+    BlogLayoutComponent,
+    BlogBodyComponent,
+    BlogListComponent
   ],
   imports: [
     routing,
@@ -91,7 +98,8 @@ import { NewsDetailComponent } from './news/news-detail/news-detail.component';
     MatSnackBarModule,
     MatListModule,
     MatGridListModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatSidenavModule
   ],
   providers: [
     Title,

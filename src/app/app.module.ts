@@ -1,11 +1,21 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; //TODO INTERCEPTOR
+import {
+  HttpClientModule,
+  HTTP_INTERCEPTORS
+} from '@angular/common/http'; //TODO INTERCEPTOR
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { routing } from './app.routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderService, MailService, FeaturesService, ContactsService, AddressService } from './shared/services';
+import {
+  HeaderService,
+  MailService,
+  FeaturesService,
+  ContactsService,
+  AddressService,
+  NewsService
+} from './shared/services';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -38,6 +48,8 @@ import { ShowCaseComponent } from './show-case/show-case.component';
 import { TileComponent } from './tile/tile.component';
 import { FeatureComponent } from './feature/feature.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
+import { NewsComponent } from './news/news.component';
+import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 
 
 @NgModule({
@@ -54,7 +66,9 @@ import { ContactListComponent } from './contact-list/contact-list.component';
     ShowCaseComponent,
     TileComponent,
     FeatureComponent,
-    ContactListComponent
+    ContactListComponent,
+    NewsComponent,
+    NewsDetailComponent
   ],
   imports: [
     routing,
@@ -85,7 +99,8 @@ import { ContactListComponent } from './contact-list/contact-list.component';
     MailService,
     FeaturesService,
     ContactsService,
-    AddressService
+    AddressService,
+    NewsService
   ],
   bootstrap: [AppComponent]
 })

@@ -10,7 +10,7 @@ import { FeaturesService } from '../shared/services';
 export class ShowCaseComponent implements OnInit {
 
   tiles: Array<Tile> = [];
-  loading: boolean = false;
+  loading: boolean = true;
 
   constructor(private featuresService: FeaturesService) { }
 

@@ -32,6 +32,7 @@ export class BlogBodyComponent implements OnInit {
 
   setHeader () { //FIXME service
     this.header.title = this.currentPost.title;
+    this.header.subtitle = this.currentPost.subtitle;
     this.headerService.setHeader(this.header);
   }
 

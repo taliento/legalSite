@@ -19,9 +19,10 @@
   position: sticky;
   display: inline-block;
   padding-left: 2rem;
-  min-width: 10rem;
+  // min-width: 10rem;
 }
 
 .blog-content {
   display: inline-block;
+  min-width: 80%;
 }

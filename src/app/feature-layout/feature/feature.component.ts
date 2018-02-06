@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { FeaturesService, HeaderService } from '../shared/services';
-import { Tile, Header } from '../shared/models';
+import { FeaturesService, HeaderService } from '../../shared/services';
+import { Tile, Header } from '../../shared/models';
 import 'rxjs/add/operator/switchMap';
 
 @Component({

@@ -3,10 +3,12 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
-import { FeatureComponent} from './feature/feature.component';
 import { BlogLayoutComponent } from './blog-layout/blog-layout.component';
 import { BlogBodyComponent } from './blog-layout/blog-body/blog-body.component';
 import { BlogListComponent } from './blog-layout/blog-list/blog-list.component';
+import { FeatureLayoutComponent } from './feature-layout/feature-layout.component';
+import { FeatureComponent} from './feature-layout/feature/feature.component';
+import { FeatureListComponent } from './feature-layout/feature-list/feature-list.component';
 
 const appRoutes: Routes = [
   {
@@ -26,8 +28,20 @@ const appRoutes: Routes = [
         component: AboutComponent
       },
       {
-        path: 'feature/:id',
-        component: FeatureComponent
+        path:'feature',
+        component: FeatureLayoutComponent,
+        children: [
+          {
+            path: ':id',
+            component: FeatureComponent,
+            outlet: 'body'
+          },
+          {
+            path: 'list',
+            component: FeatureListComponent,
+            outlet: 'list'
+          }
+        ]
       },
       {
         path: 'blog',

@@ -1,1 +1,1 @@
-<p [innerHtml]="currentPost.text"></p>
+<p *ngIf="currentPost" [innerHtml]="currentPost.text"></p>

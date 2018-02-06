@@ -47,14 +47,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ShowCaseComponent } from './show-case/show-case.component';
 import { TileComponent } from './tile/tile.component';
-import { FeatureComponent } from './feature/feature.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { NewsComponent } from './news/news.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { BlogLayoutComponent } from './blog-layout/blog-layout.component';
 import { BlogBodyComponent } from './blog-layout/blog-body/blog-body.component';
 import { BlogListComponent } from './blog-layout/blog-list/blog-list.component';
-
+import { FeatureLayoutComponent } from './feature-layout/feature-layout.component';
+import { FeatureComponent } from './feature-layout/feature/feature.component';
+import { FeatureListComponent } from './feature-layout/feature-list/feature-list.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,9 @@ import { BlogListComponent } from './blog-layout/blog-list/blog-list.component';
     NewsDetailComponent,
     BlogLayoutComponent,
     BlogBodyComponent,
-    BlogListComponent
+    BlogListComponent,
+    FeatureLayoutComponent,
+    FeatureListComponent
   ],
   imports: [
     routing,

@@ -53,7 +53,7 @@ const appRoutes: Routes = [
             outlet: 'body'
           },
           {
-            path: 'newsList',
+            path: 'list',
             component: BlogListComponent,
             outlet: 'list'
           }

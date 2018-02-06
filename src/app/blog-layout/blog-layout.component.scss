@@ -18,10 +18,11 @@
   position: -webkit-sticky;
   position: sticky;
   display: inline-block;
-  padding-left: 2rem;
-  min-width: 10rem;
+  padding-left: 1rem;
+  max-width: 30%;
 }
 
 .blog-content {
   display: inline-block;
+  min-width: 60%;
 }

@@ -1,7 +1,8 @@
 @import '../../../assets/scss/variables.scss';
 
 .blog-list {
-  padding-left: 1rem;
+  padding-left: 0.5rem;
+
 }
 
 .selected {
@@ -9,4 +10,5 @@
 }
 .link-item {
   cursor: pointer;
+  padding-bottom: 0.5rem;
 }
